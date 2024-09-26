@@ -63,8 +63,7 @@ public class MainManager : MonoBehaviour
             if (m_Points >= DataManager.Instance.playerScore)
             {
                 DataManager.Instance.playerScore = m_Points;
-                BestScoreText.text = "Best Score: " + DataManager.Instance.playerScore
-            + " Name: " + DataManager.Instance.playerNameText;
+
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
