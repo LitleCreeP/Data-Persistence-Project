@@ -9,20 +9,22 @@ using UnityEngine.UI;
 public class DataManager : MonoBehaviour
 {
     public static DataManager Instance { get; private set; }
-    public Text playerNameText;
+    public string highScorePlayerName;
+    public string playerName;
+
     public int playerScore;
 
     [System.Serializable]
     class SaveData
     {
-        public Text playerNameText;
+        public string highScorePlayerName;
         public int playerScore;
     }
 
     public void SaveScore()
     {
         SaveData data = new SaveData();
-        data.playerNameText = playerNameText;
+        data.highScorePlayerName = playerName;
         data.playerScore = playerScore;
 
         string json = JsonUtility.ToJson(data);
@@ -37,7 +39,7 @@ public class DataManager : MonoBehaviour
             string json = File.ReadAllText(path);
             SaveData data = JsonUtility.FromJson<SaveData>(json);
 
-            playerNameText = data.playerNameText;
+            highScorePlayerName = data.highScorePlayerName;
             playerScore = data.playerScore;
         }
     }
@@ -52,6 +54,5 @@ public class DataManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        LoadScore();
     }
 }

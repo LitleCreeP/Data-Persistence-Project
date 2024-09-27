@@ -1136,7 +1136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputField: {fileID: 90356970}
-  playerNameText: {fileID: 1134614351}
   playerName: 
 --- !u!1 &1427268273
 GameObject:
@@ -1420,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1d034ce5e821f14fa56e6127e206f47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNameText: {fileID: 0}
+  playerNameText: {fileID: 1134614351}
   playerScore: 0
 --- !u!4 &1741654974
 Transform:
